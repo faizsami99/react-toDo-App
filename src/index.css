@@ -1,13 +1,103 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html{
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.myTodo{
+  width: 100%;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(to bottom, #2C5364, #203A43, #0F2027); 
+  background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+}
+
+.mainDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.childDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.userInput{
+  margin-top: 2rem;
+  display: flex;
+  background: white;
+}
+
+.userInput input{
+    font-size: 20px;  
+    padding: 3px 5px;
+    border: none;
+}
+
+.userInput h1{
+  font-size: 28px ;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.userInput input:focus{
+  outline: none;
+}
+
+
+
+.icon{
+  width: 70px;
+  height: 70px;
+}
+
+
+.todomainDiv{
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  background: white;
+  width: 26%;
+  transition: 0.3s ease-in-out;
+}
+
+.todomainDiv:hover{
+  background: rgb(98, 199, 199);
+  border: 2px solid rgb(98, 199, 199);
+}
+
+.todochildDiv{
+  width: 100%;
+  display: flex;
+  padding: 4px 10px;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todochildDiv h3{
+  word-wrap: break-word;
+  width: 80%;
+}
+
+.dusbin{
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px){
+  .todomainDiv{
+    width: 78%;
+  }
 }
